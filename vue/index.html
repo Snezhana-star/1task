@@ -29,7 +29,10 @@
             <div class="cart">
                <p>Cart({{ cart }})</p>
             </div>
-            <button v-on:click="addToCart">Add to cart</button>
+            <button @click="addToCart">Add to cart</button>
+            <button v-if="cart > 0" @click="deleteToCart">Delete to cart</button>
+            <button v-else>Delete to cart</button>
+         
 
          </div>
       </div>   

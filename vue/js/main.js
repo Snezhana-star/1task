@@ -26,8 +26,10 @@ let app = new Vue({
         },
         updateProduct(variantImage) {
             this.image = variantImage
-         }
-         
+        },
+        deleteToCart(){
+            this.cart = this.cart - 1
+        } 
      }
      
  })
