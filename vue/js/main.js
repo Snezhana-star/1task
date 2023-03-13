@@ -201,7 +201,7 @@ Vue.component('product-review', {
                     variantId: 2235,
                     variantColor: 'blue',
                     variantImage: "./assets/vmSocks-blue-onWhite.jpg",
-                    variantQuantity: 0
+                    variantQuantity: 5
                 }
             ],
             reviews: []
@@ -248,11 +248,15 @@ Vue.component('product-review', {
     el: '#app',
     data: {
         premium: true,
-        cart: []
+        cartgreen: [],
+        cartblue: []
     },
     methods: {
         updateCart(id) {
-            this.cart.push(id);
+            if (id===2234){
+                this.cartgreen.push(id);
+            }
+            else this.cartblue.push(id);
         }
     }
  })
